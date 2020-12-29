@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="src/styles/records.css"/>
+    <title>Game</title>
+</head>
+<body onload="printHighscore()" style="background: url('./public/background/back.jpg');">
+<div id="scores">
+    <h1> Scores </h1>
+    <h3 id = "line0"> </h3>
+    <h3 id = "line1"> </h3>
+    <h3 id = "line2"> </h3>
+    <h3 id = "line3"> </h3>
+    <h3 id = "line4"> </h3>
+    <h3 id="yourScore"></h3>
+
+    <form action="enter.html" method="get">
+        <label>
+            <input id="buttonGo" type="submit" value="Go" style="font-size: 16pt; width: 80px; margin-left: 60px;">
+        </label>
+    </form>
+</div>
+</body>
+<script>
+    function printHighscore() {
+        document.getElementById("yourScore").innerText = 'Ваш счёт: ' + localStorage["score"];
+        let table = (JSON.parse(localStorage.getItem('highscores')));
+        table.sort(function(a,b){
+            return Number(b[1]) - Number(a[1]);
+        });
+
+        for(let i = 0; i < 5, i < table.length; i++) {
+            let line = document.getElementById(`line${i}`);
+            let el = table[i][1];
+            if(el) {
+                line.textContent = table[i][0] + ". . . . . . . . . . . . "  + table[i][1];
+            }
+        }
+    }
+</script>
+</html>

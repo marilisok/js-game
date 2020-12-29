@@ -1,0 +1,30 @@
+body{
+    background: url("../../public/background/back.jpg");
+}
+
+#canvasId{
+    width: 800px;
+    height: 600px;
+    border:3px solid #0cff8d;
+    background: white;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+#info{
+    float:  right;
+    margin-right: 5%;
+    margin-top: 10%;
+}
+
+#muteButton{
+    font-size: 16pt;
+    width: 150px;
+    margin-top: 10px;
+    color: #ff9f0d;
+}
+
+p{
+    font-size: 26px;
+    color: black;
+}

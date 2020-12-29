@@ -1,0 +1,21 @@
+body{
+    background: url("../../public/background/back.jpg");
+}
+
+form{
+    margin-left: 40%;
+    margin-top: 20%;
+    font-size: 26px;
+    color: #8c5709;
+}
+
+#button{
+    font-size: 16pt;
+    width: 80px;
+    margin-top: 10px;
+    color: #ff9f0d;
+}
+
+input{
+    font-size: 16pt;
+}

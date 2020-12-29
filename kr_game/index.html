@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="src/styles/index.css"/>
+    <script src="src/js/index.js"></script>
+    <script src="src/managers/MapManager.js"></script>
+    <script src="src/managers/SpriteManager.js"></script>
+    <script src="src/managers/PhysicManager.js"></script>
+    <script src="src/managers/EventsManager.js"></script>
+    <script src="src/managers/GameManager.js"></script>
+    <script src="src/managers/SoundManager.js"></script>
+
+    <script src="src/classes/Entity.js"></script>
+    <script src="src/classes/Bonus.js"></script>
+    <script src="src/classes/Fire.js"></script>
+    <script src="src/classes/Hit.js"></script>
+    <script src="src/classes/Orc.js"></script>
+    <script src="src/classes/Player.js"></script>
+    <title>Game</title>
+</head>
+<body>
+    <div id="background">
+        <canvas id="canvasId" width="800px" height="600px"></canvas>
+        <div id="info">
+            <p id="health"></p>
+            <p id="score"></p>
+            <button id="muteButton" onclick="gameManager.mute()">Выкл звук</button>
+        </div>
+    </div>
+    <script>
+        function updateWorld(){
+            gameManager.update();
+        }
+        let canvas = document.getElementById("canvasId");
+        let ctx = canvas.getContext('2d');
+        let mapManager = new MapManager(800, 600);
+        let spriteManager = new SpriteManager();
+        let gameManager = new GameManager();
+        let eventsManager = new EventsManager();
+        let physicManager = new PhysicManager();
+        let soundManager = new SoundManager();
+
+        gameManager.loadAll(ctx, canvas);
+        gameManager.play();
+    </script>
+</body>
+</html>

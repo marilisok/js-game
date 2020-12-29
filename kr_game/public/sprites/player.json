@@ -1,0 +1,14 @@
+{ "columns":13,
+ "image":"..\/pictures\/player.png",
+ "imageheight":1344,
+ "imagewidth":832,
+ "margin":0,
+ "name":"player",
+ "spacing":0,
+ "tilecount":273,
+ "tiledversion":"1.4.3",
+ "tileheight":64,
+ "tilewidth":64,
+ "type":"tileset",
+ "version":1.4
+}
